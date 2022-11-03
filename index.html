@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="mystyles.css" />
+
+	<title>Calculator</title>
+
+</head>
+
+<body>
+	<h1 style="color:brown ">Calculator</h1>
+	<br>
+	<script src="calc.js"></script>
+
+	<form>
+
+		<table>
+			<tbody>
+				<td>
+
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4" id="c">
+								<br>
+								<input name="texte" size="20" type="text" readonly />
+
+							</div>
+						</div>
+
+					</div>
+
+
+					<br>
+
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4" id="c">
+								<input value="7" onclick="ajouteChiffre(this.form,'7')" type="button"
+									class="mainbutton" />
+								<input value="8" onclick="ajouteChiffre(this.form,'8')" type="button"
+									class="mainbutton" />
+								<input value="9" onclick="ajouteChiffre(this.form,'9')" type="button"
+									class="mainbutton" />
+								<input value="+" onclick='store(this.form); setOp("somme")' type="button" />
+								<input value="√ " onclick='store(this.form); setOp("racine")' type="button" />
+
+
+							</div>
+						</div>
+
+					</div>
+					<br>
+
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4" id="c">
+								<input value="4" onclick="ajouteChiffre(this.form,'4')" type="button"
+									class="mainbutton" />
+
+								<input value="5" onclick="ajouteChiffre(this.form,'5')" type="button"
+									class="mainbutton" />
+								<input value="6" onclick="ajouteChiffre(this.form,'6')" type="button"
+									class="mainbutton" />
+								<input value="-" onclick='store(this.form); setOp("soustraction")' type="button" />
+								<input value="n! " onclick='store(this.form); setOp("factorielle")' type="button" />
+
+
+							</div>
+						</div>
+
+					</div>
+
+					<br>
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4" id="c">
+								<input value="1" onclick="ajouteChiffre(this.form,'1')" type="button"
+									class="mainbutton" />
+								<input value="2" onclick="ajouteChiffre(this.form,'2')" type="button"
+									class="mainbutton" />
+								<input value="3" onclick="ajouteChiffre(this.form,'3')" type="button"
+									class="mainbutton" />
+								<input value="*" onclick='store(this.form); setOp("multiplication")' type="button" />
+								<input value="log " onclick='store(this.form); log()' type="button" />
+
+
+							</div>
+						</div>
+
+					</div>
+					<br>
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4" id="c">
+								<input value="0" onclick="ajouteChiffre(this.form,'0')" type="button"
+									class="mainbutton" />
+								<input value="." onclick="ajoutePoint(this.form)" type="button" class="mainbutton" />
+								<input value="C" onclick='raz(this.form)' type="button" class="mainbutton" />
+								<input value="/" onclick='store(this.form); setOp("division")' type="button" />
+								<input value="ln" onclick='store(this.form); setOp("racine")' type="button" />
+
+
+							</div>
+						</div>
+
+					</div>
+					<br>
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4" id="c">
+								<input value="cos" onclick='store(this.form); setOp("division")' type="button" />
+								<input value="sin" onclick='store(this.form); setOp("racine")' type="button" />
+								<input value="tan" onclick='store(this.form); setOp("division")' type="button" />
+								<input value="%" onclick='store(this.form); setOp("pourcent")' type="button" />
+								<input value="log" onclick='store(this.form); setOp("racine")' type="button" />
+
+							</div>
+						</div>
+
+					</div>
+					<br>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4" id="c">
+								<br>
+								<input name="affichage" size="15" type="text" readonly />
+								<input value="=" onclick='storeEq(this.form); calc(this.form)' type="button" />
+								<br>
+
+							</div>
+						</div>
+
+					</div>
+					<br>
+				</td>
+
+
+
+
+			</tbody>
+		</table>
+		<br>
+	</form>
+
+</body>
+
+</html>
